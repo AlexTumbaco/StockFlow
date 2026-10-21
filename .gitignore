@@ -1,0 +1,28 @@
+target/
+.idea/
+.vscode/
+*.iml
+.env
+# Variables locales; solo se publica la plantilla sin secretos.
+.env.*
+*.env
+*.env.*
+!.env.example
+
+# Credenciales y certificados privados.
+.aws/
+.ssh/
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Configuracion local de Maven y archivos del sistema.
+.m2/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log

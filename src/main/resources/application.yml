@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: stockflow-api
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+  datasource:
+    url: "${DB_URL:jdbc:sqlserver://localhost:1433;databaseName=StockFlowDb;encrypt=true;trustServerCertificate=true}"
+    username: "${DB_USERNAME:sa}"
+    password: "${DB_PASSWORD}"
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+
+server:
+  port: ${SERVER_PORT:8080}
